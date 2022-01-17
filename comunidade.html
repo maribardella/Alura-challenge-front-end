@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alura Challenge</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/cabecalho.css">
+        <link rel="stylesheet" href="css/menuComunidade.css">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img class="logo_img" src="img/Logo.svg" alt="Logo da AluraDev">
+            </div>
+            <div class="pesquisar">
+                <button class="label_pesquisa" onclick="abrirBarraPesquisar()">
+                    <img src="img/Lupa.svg"  class="pesquisa">
+                </button>
+                <input type="search" class="barra_pesquisa" placeholder="Busque por algo">
+            </div>
+            <div class="perfil">
+                <button class="label_perfil">
+                    <img src="img/barra.svg"  class="barra">
+                </button>
+                <div class="login">
+                    <img class="foto_perfil" src="https://www.estrelando.com.br/uploads/2021/11/07/harrysitee-1636306855.jpg"  alt="Foto de perfil">
+                    <p>Harry</p> 
+                </div>               
+            </div>
+            <button class="botao_fechar" onclick="fecharMenu()">
+                <img src="img/Vector.svg" class="fechar">
+            </button>
+        </header>
+        <main>
+            <nav>
+                <ul class="conteudo_menu" style="list-style: none;">
+                    <li><h2 class="titulo_menu">Menu</h2></li>
+                    <li class="editor">
+                        <a href="index.html" class="botao_editor"><img src="img/editor.svg"></a>
+                        <p>Editor de Código</p>
+                    </li>
+                    <li class="comunidade">
+                        <a href="comunidade.html" class="botao_comunidade"><img src="img/comunidade.svg"></a>
+                        <p>Comunidade</p>
+                    </li>
+                </ul>
+            </nav>
+            <div class="conteudo__projetos">
+                <ul class="todos__projetos">
+                    <li class="cartao">                      
+                        <a href="index.html">
+                            <div class="area__codigo">
+                                <div class="editor__codigo">
+                                    <div class="bolinhas">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14">
+                                
+                                            <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                                                <circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle>
+                                                <circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle>
+                                                <circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <code class="codigo__escrito hljs javascript">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+
+const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
+                                    
+const unfold = (f, seed) => {
+    const go = (f, seed, acc) => {
+        const res = f(seed)
+        return res ? go(f, res[1], acc.concat([res[0]])) : acc
+    }
+    return go(f, seed, [])
+}
+                                    </code>
+                                </div>
+                            </div>
+                            <h1 class="projeto__titulo">Título do Projeto</h1>
+                            <p class="projeto__descricao">Descrição do Projeto</p>
+                        </a>
+                        <div class="info">
+                            <div class="like__coment">
+                                <div class="comentario">
+                                    <img src="img/comentario.svg" class="img__comentario">
+                                    <p class="contador">9</p>
+                                </div>
+                                <div class="comentario">
+                                    <img src="img/like.svg" class="like">
+                                    <p class="contador">9</p>
+                                </div>
+                            </div>
+                            <div class="avatar">
+                                <img class="foto__avatar" src="https://www.estrelando.com.br/uploads/2021/11/07/harrysitee-1636306855.jpg"  alt="Foto de perfil">
+                                <p class="nick">@Harry</p> 
+                            </div>
+                        </div> 
+                    </li>
+                    <li class="cartao">                      
+                        <a href="index.html">
+                            <div class="area__codigo">
+                                <div class="editor__codigo">
+                                    <div class="bolinhas">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14">
+                                
+                                            <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                                                <circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle>
+                                                <circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle>
+                                                <circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <code class="codigo__escrito hljs javascript">Hello World
+                                    </code>
+                                </div>
+                            </div>
+                            <h1 class="projeto__titulo">Título do Projeto</h1>
+                            <p class="projeto__descricao">Descrição do Projeto</p>
+                        </a> 
+                        <div class="info">
+                            <div class="like__coment">
+                                <div class="comentario">
+                                    <img src="img/comentario.svg" class="img__comentario">
+                                    <p class="contador">9</p>
+                                </div>
+                                <div class="comentario">
+                                    <img src="img/like.svg" class="like">
+                                    <p class="contador">9</p>
+                                </div>
+                            </div>
+                            <div class="avatar">
+                                <img class="foto__avatar" src="https://www.estrelando.com.br/uploads/2021/11/07/harrysitee-1636306855.jpg"  alt="Foto de perfil">
+                                <p class="nick">@Harry</p> 
+                            </div>
+                        </div> 
+                    </li>
+                    <li class="cartao">                      
+                        <a href="index.html">
+                            <div class="area__codigo">
+                                <div class="editor__codigo">
+                                    <div class="bolinhas">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="54" height="14" viewBox="0 0 54 14">
+                                
+                                            <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                                                <circle cx="6" cy="6" r="6" fill="#FF5F56" stroke="#E0443E" stroke-width=".5"></circle>
+                                                <circle cx="26" cy="6" r="6" fill="#FFBD2E" stroke="#DEA123" stroke-width=".5"></circle>
+                                                <circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle>
+                                            </g>
+                                        </svg>
+                                    </div>
+                                    <code class="codigo__escrito hljs javascript">Hello World
+                                    </code>
+                                </div>
+                            </div>
+                            <h1 class="projeto__titulo">Título do Projeto</h1>
+                            <p class="projeto__descricao">Descrição do Projeto</p>
+                        </a> 
+                            <div class="info">
+                                <div class="like__coment">
+                                    <div class="comentario">
+                                        <img src="img/comentario.svg" class="img__comentario">
+                                        <p>9</p>
+                                    </div>
+                                    <div class="comentario">
+                                        <img src="img/like.svg" class="like">
+                                        <p>9</p>
+                                    </div>
+                                </div>
+                                <div class="avatar">
+                                    <img class="foto__avatar" src="https://www.estrelando.com.br/uploads/2021/11/07/harrysitee-1636306855.jpg"  alt="Foto de perfil">
+                                    <p>@Harry</p> 
+                                </div>
+                            </div> 
+                    </li>                                       
+                </ul>
+            </div>
+        </main>
+        <!-- <script src="js/comunidade.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="js/highlight.js"></script>
+    </body>
+    
+    <script src="js/abrirBarraPesquisa.js"></script>
+
+</html>

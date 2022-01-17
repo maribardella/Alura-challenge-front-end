@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Alura Challenge</title>
         <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/dracula.css">
         <link rel="stylesheet" href="css/cabecalho.css">
         <link rel="stylesheet" href="css/menu.css">
         <link rel="stylesheet" href="css/editor.css">
@@ -16,7 +17,7 @@
                 <img class="logo_img" src="img/Logo.svg" alt="Logo da AluraDev">
             </div>
             <div class="pesquisar">
-                <button class="label_pesquisa">
+                <button class="label_pesquisa" onclick="abrirBarraPesquisar()">
                     <img src="img/Lupa.svg"  class="pesquisa">
                 </button>
                 <input type="search" class="barra_pesquisa" placeholder="Busque por algo">
@@ -25,10 +26,12 @@
                 <button class="label_perfil">
                     <img src="img/barra.svg"  class="barra">
                 </button>
-                <img class="foto_perfil" src="https://www.estrelando.com.br/uploads/2021/11/07/harrysitee-1636306855.jpg"  alt="Foto de perfil">
-                <p>Harry</p>                
+                <div class="login">
+                    <img class="foto_perfil" src="https://www.estrelando.com.br/uploads/2021/11/07/harrysitee-1636306855.jpg"  alt="Foto de perfil">
+                    <p>Harry</p> 
+                </div>               
             </div>
-            <button class="botao_fechar">
+            <button class="botao_fechar" onclick="fecharMenu()">
                 <img src="img/Vector.svg" class="fechar">
             </button>
         </header>
@@ -37,12 +40,12 @@
                 <ul class="conteudo_menu" style="list-style: none;">
                     <li><h2 class="titulo_menu">Menu</h2></li>
                     <li class="editor">
-                        <a href=""><img src="img/Editor.png"></a>
-                        <a href=""><p>Editor de Código</p></a>
+                        <a href="index.html" class="botao_editor"><img src="img/editor.svg"></a>
+                        <p>Editor de Código</p>
                     </li>
                     <li class="comunidade">
-                        <a href=""><img src="img/Comunidade.png"></a>
-                        <a href=""><p>Comunidade</p></a>
+                        <a href="comunidade.html" class="botao_comunidade"><img src="img/comunidade.svg"></a>
+                        <p>Comunidade</p>
                     </li>
                 </ul>
             </nav>
@@ -58,23 +61,23 @@
                                         <circle cx="46" cy="6" r="6" fill="#27C93F" stroke="#1AAB29" stroke-width=".5"></circle>
                                 </g>
                             </svg>
-                        </div>                        
-                        <textarea class="codigo__escrito" type="input"  contenteditable="true">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
+                        </div>                    
+                        <code type="text" class="codigo__escrito hljs" contenteditable="true" aria-label="Editor de código">const pluckDeep = key => obj => key.split('.').reduce((accum, key) => accum[key], obj)
 
 const compose = (...fns) => res => fns.reduce((accum, next) => next(accum), res)
 
 const unfold = (f, seed) => {
-    const go = (f, seed, acc) => {
+  const go = (f, seed, acc) => {
     const res = f(seed)
     return res ? go(f, res[1], acc.concat([res[0]])) : acc
-    }
-    return go(f, seed, [])
-}    
-                        </textarea>
+  }
+  return go(f, seed, [])
+}
+                        </code>
                     </div>
                 </div>
                 <div class="espaco__botao">
-                    <button class="botao__highlight" type="button" onclick="aplicarHighlight()">Visualizar com highlight</button>
+                    <button class="botao__highlight" type="button">Visualizar com highlight</button>
                 </div>
             </div>
             <div class="formulario">
@@ -96,8 +99,12 @@ const unfold = (f, seed) => {
                 </div>
             </div>
         </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+        <script src="js/highlight.js"></script>
     </body>
 
     <script src="js/abrirBarraPesquisa.js"></script>
+    <script src="js/mudarCor.js"></script>
+    <script src="js/salvarProjeto.js"></script>
 
 </html>

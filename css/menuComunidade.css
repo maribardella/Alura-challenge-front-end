@@ -1,0 +1,284 @@
+main {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+nav {
+    display: flex;
+    width: 24%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 0.5rem;
+    margin: 16px 0 0 32px;
+}
+
+.conteudo_menu {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+.editor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 16px 0;
+}
+
+.botao_editor {
+    background: rgba(80, 129, 251, 0.16);
+    border-radius: 16px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 16px;
+}
+
+.botao_editor:hover {
+    background: rgba(80, 129, 251, 0.64);
+}
+
+.botao_editor:active {
+    background: #5081FB;
+}
+
+.comunidade {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.botao_comunidade {
+    background: #5081FB;
+    border-radius: 16px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 16px;   
+}
+
+.botao_comunidade:hover {
+    background: rgba(80, 129, 251, 0.64);
+}
+
+.botao_comunidade:active {
+    background: #5081FB;
+}
+
+h2 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 18px;
+    letter-spacing: 0.4em;
+    font-style: normal;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.titulo_menu {
+    display: flex;
+    justify-content: flex-start;
+    width: 51px;
+    height: 18px;
+}
+
+.conteudo__projetos {
+    width: 100%;
+    margin: 24px 32px;
+}
+
+.todos__projetos {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+.cartao {
+    background: rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    width: 47%;
+    padding: 0 0 32px 0;
+    margin: 0 0 1.5rem 10px;
+}
+
+.area__codigo {
+    background:#6BD1FF;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 0 0 1rem 0;
+    width: 89%;
+    height: 240px;
+    
+}
+
+.editor__codigo {
+    background: #141414;
+    color:#FFFFFF;
+    padding: 1rem;
+    height: 100%;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+.codigo__escrito {
+    white-space: pre-wrap;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+}
+
+.projeto__descricao {
+    display: flex;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 8px 24px;
+}
+
+.projeto__titulo {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 31px;
+    color: #FFFFFF;
+    padding: 0 24px
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.like__coment {
+    display: flex;
+    padding: 16px 0 0 24px;
+}
+
+.comentario {
+    display: flex;
+    justify-content: space-around;
+    width: 60px;
+    align-items: center;
+}
+
+.img__comentario:hover {
+    cursor: pointer;
+}
+
+.like:hover {
+    cursor: pointer;
+}
+
+.avatar {
+    display: flex;
+    width: 105px;
+    justify-content: space-around;
+    padding: 16px 0 0 24px;
+}
+
+.foto__avatar {
+    width: 24px;
+    height: 24px;
+    border-radius: 16px;
+}
+
+.contador {
+    display: flex;
+}
+
+.nick {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+@media (max-width: 767px) {
+    nav {
+        display: none;
+    }
+    
+    .titulo_menu {
+        display: none;
+    }
+
+    .editor {
+        display: none;
+    }
+
+    .comunidade {
+        display: none;
+    }
+
+    .todos__projetos {
+        flex-direction: column;
+    }
+
+    .cartao {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .area__codigo {
+        height: 342px;
+        width: 92%;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    nav {
+        display: none;
+    }
+    
+    .titulo_menu {
+        display: none;
+    }
+
+    .editor {
+        display: none;
+    }
+
+    .comunidade {
+        display: none;
+    }
+
+    
+
+    .todos__projetos {
+        flex-direction: column;
+    }
+
+    .cartao {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .area__codigo {
+        height: 342px;
+        width: 94%;
+        padding: 1.5rem;
+    }
+
+}

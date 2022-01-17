@@ -31,10 +31,48 @@ nav {
     margin: 16px 0;
 }
 
+.botao_editor {
+    background: #5081FB;
+    border-radius: 16px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 16px;
+}
+
+.botao_editor:hover {
+    background: rgba(80, 129, 251, 0.64);
+}
+
+.botao_editor:active {
+    background: #5081FB;
+}
+
 .comunidade {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+.botao_comunidade {
+    background: rgba(80, 129, 251, 0.16);
+    border-radius: 16px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-right: 16px;   
+}
+
+.botao_comunidade:hover {
+    background: rgba(80, 129, 251, 0.64);
+}
+
+.botao_comunidade:active {
+    background: #5081FB;
 }
 
 h2 {
